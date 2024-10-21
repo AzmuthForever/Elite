@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import apiClient from "../assets/services/api-client";
 import { CanceledError } from "axios";
-interface Game {
+export interface Game {
+  background_image: string | undefined;
   id: number;
   name: string;
 }
@@ -31,3 +32,4 @@ const useGames = () => {
 };
 
 export default useGames;
+
