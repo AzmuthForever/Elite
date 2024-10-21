@@ -1,10 +1,19 @@
 import { useEffect, useState } from "react";
 import apiClient from "../assets/services/api-client";
 import { CanceledError } from "axios";
-export interface Game {
-  background_image: string | undefined;
+
+export interface Platform {
   id: number;
   name: string;
+  slug: string;
+}
+export interface Game {
+  id: number;
+  name: string;
+  background_image: string;
+  parent_platforms: {
+      map(arg0: ({ platform }: { platform: any; }) => import("react/jsx-runtime").JSX.Element): import("react").ReactNode; platform: Platform[] 
+};
 }
 
 interface FetchGamesResponse {
@@ -32,4 +41,3 @@ const useGames = () => {
 };
 
 export default useGames;
-
