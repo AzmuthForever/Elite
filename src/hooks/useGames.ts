@@ -12,8 +12,9 @@ export interface Game {
   name: string;
   background_image: string;
   parent_platforms: {
-      map(arg0: ({ platform }: { platform: any; }) => import("react/jsx-runtime").JSX.Element): import("react").ReactNode; platform: Platform[] 
-};
+    platform: Platform;
+    }[];
+    metacritic: number;
 }
 
 interface FetchGamesResponse {
